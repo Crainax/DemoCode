@@ -3,18 +3,18 @@ public class EnumTest {
     public static void main(String[] args) {
         ColorEnum green = ColorEnum.green;
         System.out.println(green);
-        //´òÓ¡½á¹û:Green
+        //æ‰“å°ç»“æœ:Green
 
         SeasonEnum season = SeasonEnum.getSeason(10);
         System.out.println("season = " + season);
-        //´òÓ¡½á¹û:winter
+        //æ‰“å°ç»“æœ:winter
 
         PersonEnum zhuXi = PersonEnum.zhuXi;
         System.out.println("zhuXi = " + zhuXi);
-        //´òÓ¡½á¹û:zhuXi,µ«ÊÇ¿ÉÒÔÍ¨¹ıÖØĞ´toString·½·¨ºó»á´òÓ¡Õâ¸ö½á¹û:PersonEnum{age=50, name='xijinping'}
+        //æ‰“å°ç»“æœ:zhuXi,ä½†æ˜¯å¯ä»¥é€šè¿‡é‡å†™toStringæ–¹æ³•åä¼šæ‰“å°è¿™ä¸ªç»“æœ:PersonEnum{age=50, name='xijinping'}
     }
 
-    //ÓëÀà²»Í¬µÄÊÇ,¿ÉÒÔĞ´³ÉpublicÀàĞÍµÄenumÄÚ²¿ĞÎÊ½.
+    //ä¸ç±»ä¸åŒçš„æ˜¯,å¯ä»¥å†™æˆpublicç±»å‹çš„enumå†…éƒ¨å½¢å¼.
     public enum ColorEnum {
 
         white, red, green, blue;
@@ -28,10 +28,10 @@ public class EnumTest {
         public final static String position = "test";
 
         /**
-         * Ã¶¾ÙÖĞÓĞÒ»¸ö×Ô´øµÄ¾²Ì¬·½·¨values(),·µ»ØenumÊµÀıµÄÊı¾İ²¢ÇÒ¸ÃÊı×éÖĞµÄÔªËØË³ĞòºÍÉùÃ÷Ê±µÄË³ĞòÒ»Ñù
-         * Ã¶¾ÙÒ²¿ÉÒÔÏñÆÕÍ¨µÄÀàÒ»Ñù¿ÉÒÔÌí¼ÓÊôĞÔºÍ·½·¨£¬¿ÉÒÔÎªËüÌí¼Ó¾²Ì¬ºÍ·Ç¾²Ì¬µÄÊôĞÔ»ò·½·¨
+         * æšä¸¾ä¸­æœ‰ä¸€ä¸ªè‡ªå¸¦çš„é™æ€æ–¹æ³•values(),è¿”å›enumå®ä¾‹çš„æ•°æ®å¹¶ä¸”è¯¥æ•°ç»„ä¸­çš„å…ƒç´ é¡ºåºå’Œå£°æ˜æ—¶çš„é¡ºåºä¸€æ ·
+         * æšä¸¾ä¹Ÿå¯ä»¥åƒæ™®é€šçš„ç±»ä¸€æ ·å¯ä»¥æ·»åŠ å±æ€§å’Œæ–¹æ³•ï¼Œå¯ä»¥ä¸ºå®ƒæ·»åŠ é™æ€å’Œéé™æ€çš„å±æ€§æˆ–æ–¹æ³•
          */
-        //Ã¶¾ÙÀàÏÂµÄ¾²Ì¬·½·¨,ÄÜ¸ù¾İÔÂ·İ»ñÈ¡¶ÔÓ¦µÄÃ¶¾ÙÀàĞÍ,ÓëÀàÊ®·ÖÏàËÆ.
+        //æšä¸¾ç±»ä¸‹çš„é™æ€æ–¹æ³•,èƒ½æ ¹æ®æœˆä»½è·å–å¯¹åº”çš„æšä¸¾ç±»å‹,ä¸ç±»ååˆ†ç›¸ä¼¼.
         public static SeasonEnum getSeason(int month) {
             if (month < 4 && month > 0)
                 return spring;
@@ -55,7 +55,7 @@ public class EnumTest {
         private final int age;
         private final String name;
 
-        //Ğ´³Épublic ĞÎÊ½µÄ¹¹ÔìÆ÷»á±¨´í.
+        //å†™æˆpublic å½¢å¼çš„æ„é€ å™¨ä¼šæŠ¥é”™.
         PersonEnum(int age, String name) {
             this.age = age;
             this.name = name;
